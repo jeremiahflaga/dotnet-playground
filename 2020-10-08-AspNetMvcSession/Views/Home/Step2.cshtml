@@ -1,0 +1,38 @@
+﻿@model AspNetMvcSession.Models.Step2ViewModel
+
+@{
+    ViewData["Title"] = "Step 2";
+}
+
+<h1>Step 2</h1>
+
+<h4>ViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Step2">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IntDataForStep2" class="control-label"></label>
+                <input asp-for="IntDataForStep2" class="form-control" />
+                <span asp-validation-for="IntDataForStep2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StringDataForStep2" class="control-label"></label>
+                <input asp-for="StringDataForStep2" class="form-control" />
+                <span asp-validation-for="StringDataForStep2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Finish" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Step1">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

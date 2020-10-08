@@ -1,0 +1,41 @@
+﻿@model AspNetMvcSession.Models.LastStepViewModel
+
+@{
+    ViewData["Title"] = "Last Step";
+}
+
+<h1>Last Step</h1>
+
+<div>
+    <h4>ViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Step1ViewModel.IntData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Step1ViewModel.IntData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Step1ViewModel.StringData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Step1ViewModel.StringData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Step2ViewModel.IntDataForStep2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Step2ViewModel.IntDataForStep2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Step2ViewModel.StringDataForStep2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Step2ViewModel.StringDataForStep2)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Step2">Back</a>
+</div>
